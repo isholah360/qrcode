@@ -1,0 +1,47 @@
+.comp-card-comp{
+    display:grid; 
+    grid-template-columns: 2fr 1.5fr 2fr;
+    width: 40rem;
+    padding: 1rem 10% 1rem 3%;
+}
+.card-img{
+    width: 13rem;
+    height: 15rem;
+}
+.card-img  img{
+    width: 100%;
+    height: 100%;
+}
+.name-social{
+    background: #142127;
+    height: 4rem;
+    width: 13rem;
+   
+}
+.name-social{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.ply-social{
+    display: flex;
+    gap: .4rem;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 79%;
+    width: 100%;
+    background: rgb(0,0,0, .5);
+    top: 0%;
+    display: none;
+    
+}
+.ply-social img{
+    width: 1.5rem;
+    padding: .5rem 0rem;
+}
+.candit-one{
+    position: relative;
+    width: 13rem;
+}
