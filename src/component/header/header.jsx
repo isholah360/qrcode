@@ -16,6 +16,31 @@ function Header() {
     <div className="header">
       <Slider {...settings}>
         <div className="outer">
+          <img src="assets/go4.jpeg" alt="" />
+          <div className="content-cover">
+            <div className="compet-dss">
+              <div className="tournment-ds-content">
+                <span>Ready to Swing Into Action?</span>
+                <br />
+                <div className="mobile-join">
+                  {" "}
+                  Join Our Upcoming <br />
+                  MTN Golf Tournament!
+                </div>
+                <div className="count-down">
+                  <Count />
+                </div>
+                <div className="join-button">
+                  <button>Join Now</button>
+                </div>
+              </div>
+              <div className="tournment-ds-img">
+                <img src="assets/gth.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="outer">
           <img src="assets/go2.jpeg" alt="" />
           <div className="content-cover">
             <div className="enjoy">
@@ -57,31 +82,7 @@ function Header() {
             </div>
           </div>
         </div>
-        <div className="outer">
-          <img src="assets/go4.jpeg" alt="" />
-          <div className="content-cover">
-            <div className="compet-dss">
-              <div className="tournment-ds-content">
-                <span>Ready to Swing Into Action?</span>
-                <br />
-                <div className="mobile-join">
-                  {" "}
-                  Join Our Upcoming <br />
-                  MTN Golf Tournament!
-                </div>
-                <div className="count-down">
-                  <Count />
-                </div>
-                <div className="join-button">
-                  <button>Join Now</button>
-                </div>
-              </div>
-              <div className="tournment-ds-img">
-                <img src="assets/gth.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div className="outer">
           <img src="assets/go5.jpeg" alt="" />
           <div className="content-cover">
