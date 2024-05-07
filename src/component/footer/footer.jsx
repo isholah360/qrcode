@@ -2,15 +2,13 @@ import "./footer.css";
 
 export default function Footer() {
   return (
-    <div style={{background:"#142127", padding:"3rem 5%"}}>
+    <div style={{ background: "#142127", padding: "3rem 5%" }}>
       <div className="the-footer-path">
         <div className="date-up-com">
-
           <div className="date-com-lists">
             <img src="assets/logo.png" alt="" />
           </div>
-          <div className="logo-content">Only Men Swap</div>
-          
+          <div className="logo-content">Elevate Your Game, Embrace the Experience.</div>
         </div>
         <div className="date-up-pages">
           <p>Important Links</p>
@@ -42,14 +40,13 @@ export default function Footer() {
             <img src="assets/you1.png" alt="" />
             <div className="smedia">Golftogether_tv</div>
           </div>
-      
         </div>
         <div className="date-up-register">
           <p>SUBSCRIBE TO DATEUP</p>
           <div className="subscribeto-dateup"></div>
           <div className="little-content">
-          DateUp offers you the opportunity to simply accelerate 
-          this process by finding out which is your life partner.
+            Experience world-class golf at our exclusive club, where stunning
+            landscapes meet exceptional facilities. 
           </div>
           <div className="button">
             <button>Register Now</button>
