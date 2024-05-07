@@ -28,7 +28,9 @@ function Navi() {
   return (
     <div>
       <div className="naviagtion">
-        <div className="logo-link">LOGO</div>
+        <div className="logo-link">
+          <img src="assets/logo.png" alt="" />
+        </div>
         <div className="navigate-list">
           <ul ref={menuMove}>
             <div className="close" onClick={handleClose}>

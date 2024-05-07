@@ -1,27 +1,33 @@
-
-import Header from '../../component/header/header'
-import Coabou from '../../component/about/coabou'
-import Competit from '../../component/competition/competit'
-import MultipleItems from '../../component/photo/recent'
-import Team from '../../component/team/team'
-import Event from '../../component/event/event'
-import Ecom from '../../component/ecom/ecom'
-import Prem from '../../component/plan/Prem'
+import {
+  Blog,
+  Event,
+  Header,
+  Ecom,
+  Footer,
+  Competit,
+  Prem,
+  Coabou,
+  MultipleItems,
+  Team,
+  CountAds,
+} from "../../component/index.js";
 
 function Home() {
   return (
     <div>
-
-    <Header/>
-    <Coabou/>
-    <Competit/>
-    <MultipleItems/>
-    <Team/>
-    <Event/>
-    <Ecom/>
-     <Prem/>
+      <Header />
+      <Coabou />
+      <Competit />
+      <MultipleItems />
+      <Team />
+      <Event />
+      <Prem />
+      <Ecom />
+      <CountAds />
+      <Blog />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
