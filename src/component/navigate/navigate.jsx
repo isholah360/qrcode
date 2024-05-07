@@ -4,17 +4,15 @@ import { gsap } from "gsap";
 import { Link } from "react-router-dom";
 
 
-
-
-
-function Navigate() {
+function Navi() {
   const menuMove = useRef(null);
+
   
   const handleMenu = () => {
     gsap.fromTo(
       menuMove.current,
       { opacity: 0, x: "15rem" }, // Initial state
-      { opacity: 1, x: "-15rem", duration: 2 } // Final state
+      { opacity: 1, x: "-18rem", duration: 2 } // Final state
     );
   };
   const handleClose = () => {
@@ -26,38 +24,34 @@ function Navigate() {
   };
 
 
-  // const handleLogout = async (e)=>{
-  //   e.preventDefault()
-  //   const res = await axios.post("http://localhost:8000/api/user/logout")
-  //   localStorage.removeItem("currentUser");
-  //   navigate('/')
-  //   console.log(res)
-  // }
+  
   return (
     <div>
       <div className="naviagtion">
-        <div className="logo-link">DateUp</div>
+        <div className="logo-link">LOGO</div>
         <div className="navigate-list">
-          <ul>
-            
+          <ul ref={menuMove}>
+            <div className="close" onClick={handleClose}>
+              X
+            </div>
             <div className="account">
-              
+             
+                {/* <Link to="/login">
+                  <button>Login</button>
+                </Link> */}
+      
             </div>
             <li>Home</li>
             <li>About Us</li>
-            <li>Trainer</li>
-            <li>Events</li>
 
-            <li>Blog</li>
-
+            <li>Event</li>
+            <li>Tournamet</li>
             <li>Contact</li>
             
-            <div className="the-mobile">
-              <button>Get the App</button>
-            </div>
+           
           </ul>
         </div>
-        <div className="farbar">
+        <div className="farbar" onClick={handleMenu}>
           <div></div>
           <div></div>
           <div></div>
@@ -68,4 +62,4 @@ function Navigate() {
   );
 }
 
-export default Navigate;
+export default Navi;

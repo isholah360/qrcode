@@ -1,8 +1,24 @@
 .comp-card-comp{
     display:grid; 
-    grid-template-columns: 2fr 1.5fr 2fr;
-    width: 40rem;
     padding: 1rem 10% 1rem 3%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.time-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    margin: 0 1rem;
+}
+.scores{
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+.match-cousre{
+    text-align: center;
+    padding: 1rem 0;
 }
 .card-img{
     width: 13rem;
@@ -24,7 +40,7 @@
     align-items: center;
     text-align: center;
 }
-.ply-social{
+.play-social{
     display: flex;
     gap: .4rem;
     position: absolute;
@@ -35,11 +51,18 @@
     background: rgb(0,0,0, .5);
     top: 0%;
     display: none;
+
     
 }
-.ply-social img{
+.play-social img{
     width: 1.5rem;
-    padding: .5rem 0rem;
+    padding: 6rem 0rem;
+    margin: 0 .3rem;
+    filter: invert(100%) sepia(0%) saturate(7405%) hue-rotate(44deg)
+    brightness(108%) contrast(101%);
+}
+.play-name{
+    color: white;
 }
 .candit-one{
     position: relative;

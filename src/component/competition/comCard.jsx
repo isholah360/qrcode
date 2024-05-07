@@ -1,44 +1,62 @@
 import "./compcad.css";
-import { useState, useEffect, useRef } from "react";
-import { TweenMax, Power3 } from "gsap";
+import { useRef } from "react";
+import { Power3 } from "gsap";
 import gsap from "gsap";
 
-function ComCard() {
+function ComCard({player, playerImg, role}) {
+ 
   const myElementRef = useRef(null);
-  const myElement = useRef(null);
+
 
   const handleOn = () => {
     gsap.fromTo(
       myElementRef.current, // Target element
-      { opacity: 0, height: 0, display:"block", }, // Initial state
-      { opacity: 1, height: "79%", duration: 1, ease: Power3.easeOut } // Final state
+      { opacity: 0, height: "0", y: "15rem", display: "block" }, // Initial state
+      {
+        opacity: 1,
+        height: "79%",
+        y: "0rem",
+        duration: 1,
+        ease: Power3.easeOut,
+      } // Final state
     );
   };
   const handleOut = () => {
     gsap.fromTo(
-        myElementRef.current, // Target element
-        { opacity: 1, height: "79%" }, // Initial state
-        { opacity: 0, height: 0, duration: 1, display:"none", ease: Power3.easeOut } // Final state
-      );
+      myElementRef.current, // Target element
+      { opacity: 1, height: "79%" }, // Initial state
+      {
+        opacity: 0,
+        height: "0",
+        duration: 1,
+        display: "none",
+        ease: Power3.easeOut,
+      } // Final state
+    );
   };
   return (
     <div>
-      <div className="comp-card-comp" onMouseEnter={handleOn} onMouseLeave={handleOut}>
-        <div className="candit-one">
+      <div className="comp-card-comp">
+        <div
+          className="candit-one"
+          onMouseEnter={handleOn}
+          onMouseLeave={handleOut}
+        >
           <div className="card-img">
-            <img src="assets/bt-golf.jpg" alt="" />
+            <img src={playerImg} alt="" />
           </div>
-          <div className="name-social" >
-            <div className="ply-nme">Ishol Duro</div>
-            <div className="ply-social"ref={myElementRef}>
+          <div className="name-social">
+            <div className="play-name">{player}
+            <br />
+             <span  style={{padding: ".5rem 0", margin:".5rem 0", fontSize:".8rem"}}>{role}</span>
+            </div>
+            <div className="play-social" ref={myElementRef}>
               <img src="assets/fb.png" alt="" />
               <img src="assets/twi.png" alt="" />
               <img src="assets/ins.png" alt="" />
             </div>
           </div>
         </div>
-        <div className="versus">vs</div>
-        <div className="candit-two"></div>
       </div>
     </div>
   );
