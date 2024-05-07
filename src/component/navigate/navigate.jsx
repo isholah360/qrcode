@@ -1,13 +1,11 @@
-import "./navigate.css";
-import { useRef } from "react";
 import { gsap } from "gsap";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
-
+import "./navigate.css";
 
 function Navi() {
   const menuMove = useRef(null);
 
-  
   const handleMenu = () => {
     gsap.fromTo(
       menuMove.current,
@@ -23,8 +21,6 @@ function Navi() {
     );
   };
 
-
-  
   return (
     <div>
       <div className="naviagtion">
@@ -36,21 +32,29 @@ function Navi() {
             <div className="close" onClick={handleClose}>
               X
             </div>
-            <div className="account">
-             
-                {/* <Link to="/login">
-                  <button>Login</button>
-                </Link> */}
-      
-            </div>
-            <li>Home</li>
+            <div className="account"></div>
+
+            <li>
+              <Link to='/login'>
+                <div className="login-but">login</div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/register">
+                <div className="login-but">logout</div>
+              </Link>
+            </li>
+
+            <li>
+            <Link to="/">
+                Home
+              </Link>
+            </li>
             <li>About Us</li>
 
             <li>Event</li>
             <li>Tournamet</li>
             <li>Contact</li>
-            
-           
           </ul>
         </div>
         <div className="farbar" onClick={handleMenu}>
@@ -58,7 +62,6 @@ function Navi() {
           <div></div>
           <div></div>
         </div>
-        
       </div>
     </div>
   );

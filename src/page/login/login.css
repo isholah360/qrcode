@@ -42,3 +42,11 @@ form  div button{
   min-width: 4rem;
 
 }
+@media screen and (max-width: 760px) {
+    .form-logcover{
+       overflow-x: hidden;
+    }
+    .compl-form{
+        overflow-x: hidden;
+    }
+}
