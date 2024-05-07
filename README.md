@@ -15,6 +15,13 @@ This project is a frontend design for a golf portal that is preparing for a tour
 ## Fonts and Styling
 For this project, I chose Verdana, Geneva, Tahoma, sans-serif; because of its readability and clean design. The font is used consistently across paragraphs, headers, and other text elements to ensure a uniform appearance. The font size is chosen to be easily readable without overwhelming the design.
 
+## Color Code
+#6b860e;
+#142127;
+#f3f3f3
+#808080
+#e07135
+
 ## Animations and Transitions
 To add a touch of dynamism, I used GSAP (GreenSock Animation Platform) for animations and transitions. The animations are subtle yet add a lively feel to the design, enhancing user interaction.
 
