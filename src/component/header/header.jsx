@@ -53,7 +53,7 @@ function Header() {
                   <button>Join Now</button>
                 </div>
               </div>
-              <div className="tournment-ds-img" ref={title}>
+              <div className="tournment-ds-img" >
                 <img  src="assets/gth.png" alt="" />
               </div>
             </div>
