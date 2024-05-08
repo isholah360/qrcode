@@ -23,12 +23,12 @@ function Event() {
     tl.fromTo(
       parallaxa.current,
       { opacity: 0, y: 50 }, // Initial state
-      { opacity: 1, y: 0, duration: 2 } // Final state
+      { opacity: 1, y: 0, duration: .6 } // Final state
     );
     tl.fromTo(
       parallaxy.current,
-      { opacity: 0, x: -100 }, // Initial state
-      { opacity: 1, x: 0, duration: 1 } // Final state
+      { opacity: 0, x: -30 }, // Initial state
+      { opacity: 1, x: 0, duration: .5 } // Final state
     );
 
   }, []);

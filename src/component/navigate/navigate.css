@@ -80,6 +80,7 @@
         position: relative;
         flex-direction: column;
         align-items: flex-start;
+        overflow-x: hidden;
     }
     .logo-link{
         font-size:1rem ;

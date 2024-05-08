@@ -42,6 +42,7 @@
 @media screen and (max-width: 760px) {
     .ecom-complete {
         overflow: hidden;
+    
     }
     .ecom-complete .first-dd{
         width: 20rem;

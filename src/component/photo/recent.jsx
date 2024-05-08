@@ -23,7 +23,7 @@ function MultipleItems() {
     tl.fromTo(
       parallaxa.current,
       { opacity: 0, y: 50 }, // Initial state
-      { opacity: 1, y: 0, duration: 2 } // Final state
+      { opacity: 1, y: 0, duration: .5 } // Final state
     );
   }, []);
   const settings = {

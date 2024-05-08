@@ -4,6 +4,7 @@
     overflow-x: hidden;
     display: grid;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden;
 }
 .event-complete .our-event{
     color: #6b860e; 

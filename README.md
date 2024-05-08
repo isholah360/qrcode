@@ -13,7 +13,7 @@ Currently, two official plugins are available:
 This project is a frontend design for a golf portal that is preparing for a tournament. The design includes a login and registration system, a floating "join now" advert banner, and other elements to enhance the user experience.
 
 ## Fonts and Styling
-For this project, I chose Verdana, Geneva, Tahoma, sans-serif, Alex Brush,Oswald ; because of its readability and clean design. The font is used consistently across paragraphs, headers, and other text elements to ensure a uniform appearance. The font size is chosen to be easily readable without overwhelming the design.
+For this project, I chose Verdana, sans-serif, Alex Brush,Oswald ; because of its readability and clean design. The font is used consistently across paragraphs, headers, and other text elements to ensure a uniform appearance. The font size is chosen to be easily readable without overwhelming the design.
 
 ## Color Code
 #6b860e;
