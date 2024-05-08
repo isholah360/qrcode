@@ -76,7 +76,7 @@ function Header() {
                 courses has never been easy.
               </div>
               <div className="the-button">
-                <button>BOOK TIME</button> <br className="break" />
+                <button>BOOK TIME</button> 
                 <button style={{ margin: "0 .8rem" }}>LEARN MORE</button>
               </div>
             </div>

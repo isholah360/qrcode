@@ -90,7 +90,12 @@
 }
 @media screen and (max-width: 480px) {
     .plcard{
-        padding: 2rem 5rem;
+        padding: 2rem 4rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-content: center;
+       
     }
     .pln-complete{
         overflow-x: hidden;
