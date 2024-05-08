@@ -2,15 +2,39 @@ import { use } from "react";
 import "./team.css";
 import Mainteam from "./mainteam";
 import ComCard from "../competition/comCard";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
 function Team() {
+  const parallaxRef = useRef(null);
+  const parallaxa = useRef(null);
+  useEffect(() => {
+    // Set up a GSAP timeline for the parallax animation
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: parallaxRef.current,
+        start: "top center", // Adjust the start point as needed
+        end: "bottom center",
+        once: true, // Enables scrubbing for a smoother effect
+      },
+    });
+
+    // Define your parallax animation
+    tl.fromTo(
+      parallaxa.current,
+      { opacity: 0, y: 50 }, // Initial state
+      { opacity: 1, y: 0, duration: 2 } // Final state
+    );
+  }, []);
   return (
-    <div style={{background:"#f3f3f3", margin:"4rem 0 0 0"}}>
-      <div className="team-complete">
-         <div style={{color:"#6b860e", textAlign:"center"}}>OUR TEAM</div>
+    <div style={{background:"#f3f3f3", margin:"4rem 0 0 0"}} ref={parallaxRef}>
+      <div className="team-complete" ref={parallaxa}>
+         <div style={{color:"#6b860e", textAlign:"center"}} >OUR TEAM</div>
         <div className="prof-team">Meet Our Professionals</div>
         <div className="active-grid">
           <Mainteam

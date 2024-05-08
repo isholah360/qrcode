@@ -1,14 +1,45 @@
 import "./event.css";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function Event() {
+  const parallaxRef = useRef(null);
+  const parallaxa = useRef(null);
+  const parallaxy = useRef(null);
+  useEffect(() => {
+    // Set up a GSAP timeline for the parallax animation
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: parallaxRef.current,
+        start: "top center", // Adjust the start point as needed
+        end: "bottom center",
+        once: true, // Enables scrubbing for a smoother effect
+      },
+    });
+
+    // Define your parallax animation
+    tl.fromTo(
+      parallaxa.current,
+      { opacity: 0, y: 50 }, // Initial state
+      { opacity: 1, y: 0, duration: 2 } // Final state
+    );
+    tl.fromTo(
+      parallaxy.current,
+      { opacity: 0, x: -100 }, // Initial state
+      { opacity: 1, x: 0, duration: 1 } // Final state
+    );
+
+  }, []);
   return (
-    <div style={{overflowX:"hidden"}}>
+    <div style={{overflowX:"hidden"}} ref={parallaxRef}>
       <div className="event-complete">
         <div className="the-main-event">
-          <div className="event-golfer-img">
+          <div className="event-golfer-img" ref={parallaxy}>
             <img src="assets/g3.jpeg" alt="" />
           </div>
-          <div className="the-three-events">
+          <div className="the-three-events" ref={parallaxa}>
             <div className="our-event">OUR EVENTS</div>
             <div className="let-plan">Let’s Make It A Golf Day</div>
             {/* Event two */}

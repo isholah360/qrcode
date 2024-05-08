@@ -2,8 +2,38 @@ import { useState } from "react";
 import "./competit.css";
 import Timematch from "./timematch";
 import ComCard from "./comCard";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function Competit() {
+  const parallaxRef = useRef(null);
+  const parallaxa = useRef(null);
+  const parallay = useRef(null);
+  useEffect(() => {
+    // Set up a GSAP timeline for the parallax animation
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: parallaxRef.current,
+        start: "top center", // Adjust the start point as needed
+        end: "bottom center",
+        once: true, // Enables scrubbing for a smoother effect
+      },
+    });
+
+    // Define your parallax animation
+    tl.fromTo(
+      parallaxa.current,
+      { opacity: 0, x: -50 }, // Initial state
+      { opacity: 1, x: 0, duration: 2 } // Final state
+    );
+    tl.fromTo(
+      parallay.current,
+      { opacity: 0, x: 80 }, // Initial state
+      { opacity: 1, x: 0, duration: 2 } // Final state
+    );
+  }, []);
   const [visibleDiv, setVisibleDiv] = useState(1);
 
   const today = new Date().getDate();
@@ -12,9 +42,9 @@ function Competit() {
     setVisibleDiv(divNumber);
   };
   return (
-    <div>
+    <div ref={parallaxRef}>
       <div className="competit-comp">
-        <div className="compet-time">
+        <div className="compet-time" ref={parallaxa}>
           <div className="nextmatch">Next Matches</div>
           <hr style={{ width: "4rem" }} />
           <div className="glorious">
@@ -59,7 +89,7 @@ function Competit() {
             />
           </span>
         </div>
-        <div className="the-competitors">
+        <div className="the-competitors" ref={parallay}>
           <div className="competit-title">
             <div className="mtch-review">Match Review </div>
             WE ARE VERY EXCITED TO GO OVER THIS EXCEPTIONAL TOURNAMENT THAT

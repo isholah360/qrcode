@@ -1,13 +1,43 @@
 import "./coabout.css";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function Coabou() {
+  const parallaxRef = useRef(null);
+  const parallaxa = useRef(null);
+  const parallay = useRef(null);
+  useEffect(() => {
+    // Set up a GSAP timeline for the parallax animation
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: parallaxRef.current,
+        start: "top center", // Adjust the start point as needed
+        end: "bottom center",
+        once: true, // Enables scrubbing for a smoother effect
+      },
+    });
+
+    // Define your parallax animation
+    tl.fromTo(
+      parallaxa.current,
+      { opacity: 0, x: 80 }, // Initial state
+      { opacity: 1, x: 0, duration: 2 } // Final state
+    );
+    tl.fromTo(
+      parallay.current,
+      { opacity: 0, x: -80 }, // Initial state
+      { opacity: 1, x: 0, duration: 2 } // Final state
+    );
+  }, []);
   return (
-    <div>
+    <div ref={parallaxRef}>
       <div className="cobout">
-        <div className="cobout-img">
+        <div className="cobout-img" ref={parallaxa}>
           <img src="assets/gf4.jpeg" alt="" />
         </div>
-        <div className="cobout-cont">
+        <div className="cobout-cont" ref={parallay}>
           <span>ABOUT US</span>
           <div
             style={{
