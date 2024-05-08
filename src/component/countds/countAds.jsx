@@ -25,18 +25,18 @@ function CountAds() {
     // Define your parallax animation
     tl.fromTo(
       parallaxa.current,
-      { opacity: 0, x: -150 }, // Initial state
-      { opacity: 1, x: 0, duration: 2 } // Final state
+      { opacity: 0, x: -150 }, 
+      { opacity: 1, x: 0, duration: 2 } 
     );
     tl.fromTo(
       parallaxy.current,
-      { opacity: 0, x: 150 }, // Initial state
-      { opacity: 1, x: 0, duration: 2 } // Final state
+      { opacity: 0, x: 150 }, 
+      { opacity: 1, x: 0, duration: 2 } 
     );
     tl.fromTo(
       parallay.current,
-      { opacity: 0, y: 50 }, // Initial state
-      { opacity: 1, y: 0, duration: .5 } // Final state
+      { opacity: 0, y: 50 }, 
+      { opacity: 1, y: 0, duration: .5 } 
     );
   }, []);
   return (

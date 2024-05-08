@@ -9,13 +9,13 @@ function MultipleItems() {
   const parallaxRef = useRef(null);
   const parallaxa = useRef(null);
   useEffect(() => {
-    // Set up a GSAP timeline for the parallax animation
+  
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: parallaxRef.current,
-        start: "top center", // Adjust the start point as needed
+        start: "top center", 
         end: "bottom center",
-        once: true, // Enables scrubbing for a smoother effect
+        once: true, 
       },
     });
 

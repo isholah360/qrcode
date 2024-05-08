@@ -2,25 +2,44 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./header.css";
+import gsap from "gsap";
+import { Power3 } from "gsap";
 import Count from "./count";
+import { useState, useRef, useEffect } from "react";
+
 
 function Header() {
+  
+  const refOne = useRef(null)
+  const title = useRef(null);
+ 
+ 
   var settings = {
     dots: true,
     infinite: true,
-    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    speed: 3500,
+    autoplaySpeed: 2000,
   };
+  useEffect(()=>{
+    gsap.fromTo(
+      title.current, // Target element
+      { opacity: 0, x: 100, position:"absolute" }, // Initial state
+      { opacity: 1, x: 0, duration: 3, ease: Power3.easeOut, position:"relative"} // Final state
+    );
+  }, [])
+  
   return (
     <div className="header">
       <Slider {...settings}>
-        <div className="outer">
+        <div className="outer" >
           <img src="assets/go4.jpeg" alt="" />
-          <div className="content-cover">
-            <div className="compet-dss">
-              <div className="tournment-ds-content">
-                <span>Ready to Swing Into Action?</span>
+          <div className="content-cover" >
+            <div className="compet-dss" >
+              <div className="tournment-ds-content" >
+                <span> Ready to Swing Into Action?</span>
                 <br />
                 <div className="mobile-join">
                   {" "}
@@ -30,12 +49,12 @@ function Header() {
                 <div className="count-down">
                   <Count />
                 </div>
-                <div className="join-button">
+                <div className="join-button" >
                   <button>Join Now</button>
                 </div>
               </div>
-              <div className="tournment-ds-img">
-                <img src="assets/gth.png" alt="" />
+              <div className="tournment-ds-img" ref={title}>
+                <img  src="assets/gth.png" alt="" />
               </div>
             </div>
           </div>
@@ -49,7 +68,7 @@ function Header() {
                 ENJOY ULTIMATE{" "}
                 <hr style={{ width: "7rem", background: "#fff" }} />
               </div>
-              <div className="golf-exper">GOLF EXPERIENCE</div>
+              <div className="golf-exper" >GOLF EXPERIENCE</div>
               <div className="golf-sub">
                 Our legendary ourse is classic Gem that Cater exclusively to our
                 members.
