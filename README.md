@@ -40,8 +40,8 @@ To run the project locally, follow these steps:
 5. Access the project in your browser at `http://localhost:5173/`.
 
 ## References and Sources
-- The logo used in this project was provided by [Source of the Logo].
-- The images and graphics were sourced from [Image Source or Free Image Resource].
+- The logo used in this project was provided by Hiring manager.
+- The images and graphics were sourced from Free Image Resource.
 
 ## Acknowledgements
 I would like to thank the interview team for giving me the opportunity to work on this project. If you have any feedback or suggestions, please feel free to reach out.
