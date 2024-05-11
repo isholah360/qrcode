@@ -72,6 +72,17 @@
     text-decoration: none;
     color: #6b860e;
  }
+ li a:hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+ }
+ 
+ li:hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+    cursor: pointer;
+    text-decoration-skip: 1px;
+ }
 @media screen and (max-width: 760px) {
     .naviagtion{
         background-color: #142127;
@@ -109,6 +120,10 @@
         padding: 0rem 0;
         font-weight: 550;
 
+    }
+    ul li:hover{
+        background: #6b860e;
+        color:white
     }
     .close{
         font-size: 1.5rem;

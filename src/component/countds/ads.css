@@ -45,9 +45,9 @@
     border-radius: 10px;
   }
   .power-by{
-    display: grid;
-    align-content: center;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
   }
@@ -59,12 +59,18 @@
     width: 100%;
 }
 .buton button{
-    padding: .5rem 1.8rem;
-    border-style: none;
-    border-radius: 10px;
-    color: white ;
-    background: #6b860e;;
-}
+  background: #6b860e;
+  border-style: none;
+  padding: .8rem 1.2rem;
+  color: white;
+  font-weight: lighter;
+ cursor: pointer;
+ border-radius: 10px;
+ }
+ .buton button:hover{
+     background-color: #c2e447;
+ }
+
 @media screen and (max-width: 760px) {
     .the-second-ds{
        overflow-x: hidden;

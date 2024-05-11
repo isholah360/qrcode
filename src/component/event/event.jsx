@@ -57,7 +57,7 @@ function Event() {
                     equestrian enthusiasts.
                   </div>
                 </div>
-                <div className="event-button">
+                <div className="buton">
                   <button>BOOK TICKET</button>
                 </div>
               </div>
@@ -79,7 +79,7 @@ function Event() {
                     equestrian enthusiasts.
                   </div>
                 </div>
-                <div className="event-button">
+                <div className="buton">
                   <button>BOOK TICKET</button>
                 </div>
               </div>
@@ -101,7 +101,7 @@ function Event() {
                     equestrian enthusiasts.
                   </div>
                 </div>
-                <div className="event-button">
+                <div className="buton">
                   <button>BOOK TICKET</button>
                 </div>
               </div>

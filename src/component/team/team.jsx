@@ -75,7 +75,10 @@ function Team() {
               a winning spirit, constantly driving each other to achieve
               excellence.
             </div>
-            <button>Discover More</button>
+            <div className="buton">
+              <button>Discover More</button>
+            </div>
+           
           </div>
           <ComCard player="Sesan Rogers" playerImg="assets/go.jpeg" role="Instructor"/>
           <ComCard player="Sesan Rogers" playerImg="assets/go.jpeg"role="Instructor"/>

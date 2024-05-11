@@ -56,7 +56,7 @@ function CountAds() {
                 <div className="power-img">
                     <img src="assets/logo.png" alt="" />
                 </div>
-                <div className="buton"><button>Join Now</button></div>
+                <div className="join-button buton"><button>Join Now</button></div>
             </div>
          </div>
       </div>

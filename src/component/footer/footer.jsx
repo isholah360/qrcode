@@ -48,7 +48,7 @@ export default function Footer() {
             Experience world-class golf at our exclusive club, where stunning
             landscapes meet exceptional facilities. 
           </div>
-          <div className="button">
+          <div className="buton">
             <button>Register Now</button>
           </div>
         </div>

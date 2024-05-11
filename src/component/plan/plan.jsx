@@ -12,7 +12,10 @@ function Plan(props) {
         <div> Discount Events</div>
         <div> 4 Hours Session</div>
         <div>24/7 Full Support</div>
+        <div className="buton">
         <button>Get Started</button>
+        </div>
+      
       </div>
     </div>
   )

@@ -64,6 +64,11 @@ margin: .9rem 0;
  padding: .8rem 1.2rem;
  color: white;
  font-weight: lighter;
+cursor: pointer;
+border-radius: 10px;
+}
+.the-button button:hover{
+    background-color: #c2e447;
 }
 .break{
     display: none;
@@ -121,6 +126,10 @@ margin: .9rem 0;
     border-style: none;
     border-radius: 10px;
     font-size: 1rem;
+    cursor: pointer;
+}
+.join-button button:hover{
+    background-color: #c2e447;
 }
 .tournment-ds-content{
     font-size: 3rem;
@@ -149,6 +158,10 @@ margin: .9rem 0;
     .the-button button{
         font-size: .8rem;
         padding: .6rem .9rem;
+        cursor: pointer;
+     }
+     .the-button button:hover{
+      
      }
      .tester{
         display: flex;
@@ -235,6 +248,7 @@ margin: .9rem 0;
         border-style: none;
         border-radius: 10px;
         font-size: 1rem;
+        
     }
     .tournment-ds-content{
         font-size: 3rem;

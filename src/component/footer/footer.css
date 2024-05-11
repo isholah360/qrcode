@@ -13,6 +13,9 @@
 .date-up-com .date-com-lists{
      width: 15rem;
 }
+.date-up-com .logo-content{
+    text-align: center;
+}
 .date-com-lists img{
     width: 100%;
 }
@@ -74,6 +77,9 @@
     margin: 0 0 0 -.5rem;
     transition: 200ms;
     cursor: pointer;
+}
+.date-up-register .buton{
+    margin: 1rem 0;
 }
 @media screen and (max-width: 760px) {
     .the-footer-path{

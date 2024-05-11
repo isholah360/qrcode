@@ -54,7 +54,7 @@ function Blog() {
          blogzContent="Explore effective communication strategies for online interactions.
          Offer advice on staying safe while dating online."/>
       </div>
-        <div className="all-blogs">
+        <div className="buton">
             <button>All Blog Stories</button>
         </div>
     </div>
