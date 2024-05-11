@@ -23,6 +23,9 @@
 .log-out a{
    text-decoration: none;
 }
+.log-out a div:hover{
+    color:lightgrey
+ }
 .log-out a div{
     color: white;
     margin: 0 .5rem;

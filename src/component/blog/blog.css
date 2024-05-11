@@ -78,9 +78,13 @@
     border-radius: 25px;
     border-style: none;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: white;
     padding: 10px 2.5rem;
+}
+.complete-blog .buton button{
+    font-size: .95rem;
+    
 }
 @media screen and (max-width: 760px) {
     .lists-of-blogs{

@@ -1,6 +1,6 @@
 function Timematch({place, maindt, tyme, nameone, nametwo}) {
   return (
-    <div>
+    <div style={{cursor:"pointer"}}>
       <div className="mt-date-time">
         <div className="mt-date">
           <div style={{ fontSize: "2rem" }}>{maindt}</div>
